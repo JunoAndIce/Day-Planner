@@ -38,3 +38,33 @@ $(".btn").click(function(event){
 })
 
 
+$('.time-block').each (function(index) {
+  // get the specific ID of the time block and check with the current time 
+
+  var timeSection = $(this).attr('id').split('-')[1];
+  var currentTime = dayjs().format('H');
+  
+  console.log(timeSection + ' ' + currentTime);
+
+// Adds classes to textarea
+  if (timeSection === currentTime)
+  {
+    $(this).find('.text').addClass("present");
+  }
+  else if (timeSection > currentTime)
+  {
+    $(this).find('.text').addClass("future");
+  } 
+  else if (timeSection < currentTime)
+  {
+    $(this).find('.text').addClass("past");
+  } 
+  
+  // Local Storage Get
+  var savedEvent = localStorage.getItem(timeSection);
+
+  if (savedEvent) {
+    $(this).find('.text').val(savedEvent);
+  }
+});
+
