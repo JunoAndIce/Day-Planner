@@ -1,5 +1,6 @@
 # Day-Planner
 
+
 ## Table of Contents
 1. [Description](#Description)
 2. [Screenshots](#Screenshots)
