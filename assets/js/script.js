@@ -30,14 +30,13 @@ Array.from(tr).forEach(function(trArray) {
 $(".btn").click(function(event){
 
   var value =  $(this).closest("tr").find('.text').val();
-
   var key = $(this).closest("tr").attr('id').split('-')[1];
 
-  console.log(key + ' ' + value);
-
+  // console.log("Button pressed");
+  // console.log(key + ' ' + value);
+  // Save to local storage
   localStorage.setItem(key, value);
 
-  console.log("Button pressed");
 })
 
 $('.time-block').each (function(index) {
@@ -49,6 +48,7 @@ $('.time-block').each (function(index) {
   
   console.log(timeSection + ' ' + currentTime);
 
+
   if (timeSection === currentTime)
   {
     $(this).find('.text').addClass("present");
@@ -56,34 +56,17 @@ $('.time-block').each (function(index) {
   else if (timeSection > currentTime)
   {
     $(this).find('.text').addClass("future");
-
   } 
   else if (timeSection < currentTime)
   {
     $(this).find('.text').addClass("past");
   } 
   
+  // Local Storage Get
   var savedEvent = localStorage.getItem(timeSection);
 
   if (savedEvent) {
     $(this).find('.text').val(savedEvent);
   }
-});
-
-function loadSettings() {
-  //Pull time key and value from local storage
-  // target specific text-area that has the same time as the row
-  // push event object into the textarea
-
-  // var currentTime = dayjs().hour;
-  // console.log(time);
-
-
-}
-
-// Saving to local storage and retrieving 
-$(document).ready(function() {
-  loadSettings();
-  
 });
 

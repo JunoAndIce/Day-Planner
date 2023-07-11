@@ -5,6 +5,7 @@
   margin: 0;
 }
 
+/* For JS use  */
 :root {
   --past: rgb(184, 184, 184);
   --future: #00cf7c;
