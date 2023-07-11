@@ -6,31 +6,44 @@
 }
 
 :root {
-  --past-color: rgb(184, 184, 184);
+  --past: rgb(184, 184, 184);
   --future: #00cf7c;
   --present: #e40000;
 }
 
+.past {
+  background-color: var(--past);
+}
 
+.present {
+  background-color: var(--present);
+}
+
+.future {
+  background-color: var(--future);
+}
+
+
+/* Hero Section  */
 .hero-sec {
   text-align: center;
   padding: 40px;
-  background-color: rgb(201, 160, 255);
-  border-bottom: 10px black;
-  
+  background-color: rgb(160, 217, 255);
+  border-bottom: 10px solid;
+  border-top: 10px solid;
 }
 
 .hero-sec h1{
   font-weight: 700;
   font-size: 3.2em;
-  
 }
 
 p:first-of-type{
   font-weight: 700;
-  
 }
 
+
+/* Schedule Section  */
 table {
   display: flex;
   align-items: center;
@@ -40,7 +53,7 @@ table {
   margin-top: 15px;
 }
 
-#time-block {
+.time-block {
   display: flex;
   align-items: space;
   justify-content: space-around;
@@ -66,19 +79,29 @@ table tr .time {
 
 }
 
+table tr .input {
+  margin-left: 10px;
+
+}
+
 table tr td textarea {
   resize: none;
   overflow: hidden;
 
   width: 100%;
   height: 100%; 
-  margin-left: 10px;
   font-size: 1.2em;
-
+  padding: 5px;
   border: 2px solid;
   border-radius: 5px;
+  
 
   background-color: var(--past-color);
+}
+
+table tr .btn_cont {
+  margin-left: 10px;
+
 }
 
 .table tr td button {
@@ -88,8 +111,8 @@ table tr td textarea {
   
   width: 100%;
   height: 100%;
-
-  margin-left: 20px;
+  padding: 20px;
+  
 
   font-size: 1.2em;
 
