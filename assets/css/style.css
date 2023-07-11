@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --past-color: rgb(184, 184, 184);
+  --future: #00cf7c;
+  --present: #e40000;
+}
+
+
+.hero-sec {
+  text-align: center;
+  padding: 40px;
+  background-color: rgb(201, 160, 255);
+  
+}
+
+.hero-sec h1{
+  font-weight: 700;
+  
+}
+
+p:first-of-type{
+  font-weight: 700;
+  
+}
+
+table {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+
+  margin-top: 15px;
+}
+
+#time-block {
+  display: flex;
+  align-items: space;
+  justify-content: space-around;
+
+  margin: 15px;
+
+  /* background-color:  rgb(128, 128, 128); */
+}
+
+
+table tr .time {
+  text-align: center;
+
+  width: 15vw;
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 5px;
+
+
+  font-size: 1.1em;
+  font-weight: 800;
+
+}
+
+table tr td textarea {
+  resize: none;
+  overflow: hidden;
+
+  border: 2px solid;
+  border-radius: 5px;
+
+  width: 100%;
+  height: 100%; 
+  margin-left: 10px;
+  font-size: 1.2em;
+
+  background-color: var(--past-color);
+}

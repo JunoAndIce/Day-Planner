@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="./assets/js/script.js"></script>
   <title>Day Planner</title>
 </head>
 
 
-
+<!-- TODO: Fix header with time from dayjs/apply style -->
+<!-- TODO: create a table with times from 9am to 5pm -->
+<!-- TODO: Append a save button at the end of each row  -->
+<!-- TODO: Save each input to local storage -->
+<!-- TODO:  -->
 
 <body>
   <header class="hero-sec">
@@ -17,5 +20,53 @@
     <p>Never miss an event again!</p>
     <p id="1a" class="answer"></p>
   </header>
+
+  <table class="table" id="table">
+    <tr id="time-block">
+      <td class="time">9 am</td>
+      <hr>
+      <td class="input"> <textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time"> 10 am</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">11 am</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">12 pm</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">1 pm</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">2 pm</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">3 pm</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">4 pm</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+    <tr id="time-block">
+      <td class="time">5 pm</td>
+      <td class="input"><textarea id="tasks" rows="2" cols="80"></textarea></td>
+    </tr>
+  </table>
+  
+
+  <script src="./assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.js"
+  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
 </body>
 </html>
